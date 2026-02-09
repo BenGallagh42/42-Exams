@@ -43,8 +43,8 @@ void print_grid(t_grid *grid)
     {
         j = -1;
         while (++j < grid->width)
-            write(1, grid->cells[i][j] ? "O" : " ", 1);
-        write(1, "\n", 1);
+            putchar(grid->cells[i][j] ? 'O' : ' ');
+        putchar('\n');
     }
 }
 
