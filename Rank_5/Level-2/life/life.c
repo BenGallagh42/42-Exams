@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include <unistd.h>
+#include <stdio.h>
 
 typedef struct s_grid
 {
@@ -77,9 +78,9 @@ void process_commands(t_grid *grid)
             if (drawing) grid->cells[y][x] = 1;
             x++;
         }
+		if (drawing)
+        	grid->cells[y][x] = 1;
     }
-    if (drawing)
-        grid->cells[y][x] = 1;
 }
 
 int count_neighbors(t_grid *grid, int y, int x)
